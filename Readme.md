@@ -1,3 +1,9 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/RangeDataSourceForSnap/Form1.cs) (VB: [Form1.vb](./VB/RangeDataSourceForSnap/Form1.vb))
+* [MyColumnDetector.cs](./CS/RangeDataSourceForSnap/MyColumnDetector.cs) (VB: [MyColumnDetector.vb](./VB/RangeDataSourceForSnap/MyColumnDetector.vb))
+<!-- default file list end -->
 # An example of using a cell range as a data source
 
 
