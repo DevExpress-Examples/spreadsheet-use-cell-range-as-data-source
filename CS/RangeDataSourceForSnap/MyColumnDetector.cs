@@ -2,16 +2,20 @@
 using System;
 using System.Linq;
 
-namespace RangeDataSourceForSnap {
+namespace RangeDataSourceForSnap
+{
     #region #MyColumnDetector
-    class MyColumnDetector : IDataSourceColumnTypeDetector {
-        public string GetColumnName(int index, int offset, Range range) {
+    class MyColumnDetector : IDataSourceColumnTypeDetector
+    {
+        public string GetColumnName(int index, int offset, CellRange range)
+        {
             if (offset > 3) return String.Format("Column{0}", index);
             string[] names = { "City", "Year", "Month", "Temperature" };
             return names[index];
         }
 
-        public Type GetColumnType(int index, int offset, Range range) {
+        public Type GetColumnType(int index, int offset, CellRange range)
+        {
             Type defaultType = typeof(string);
             CellValue value = range[0, offset].Value;
             if (value.IsText) return typeof(string);
