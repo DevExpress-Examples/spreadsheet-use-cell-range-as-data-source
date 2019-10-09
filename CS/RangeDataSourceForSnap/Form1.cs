@@ -28,7 +28,7 @@ namespace RangeDataSourceForSnap {
             #region #RangeAsDataSource
             RangeDataSourceOptions options = new RangeDataSourceOptions();
             Worksheet sheet = spreadsheetControl1.ActiveWorksheet;
-            Range dataRange = sheet.Selection;
+            CellRange dataRange = sheet.Selection;
             if (dataRange.Equals(sheet.Tables[0].Range))
                 options.UseFirstRowAsHeader = true;
             else {
