@@ -31,7 +31,7 @@ Namespace RangeDataSourceForSnap
 '            #Region "#RangeAsDataSource"
             Dim options As New RangeDataSourceOptions()
             Dim sheet As Worksheet = spreadsheetControl1.ActiveWorksheet
-            Dim dataRange As Range = sheet.Selection
+        Dim dataRange As CellRange = sheet.Selection
             If dataRange.Equals(sheet.Tables(0).Range) Then
                 options.UseFirstRowAsHeader = True
             Else
