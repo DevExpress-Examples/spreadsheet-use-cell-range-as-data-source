@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 
-namespace RangeDataSourceForSnap {
+namespace RangeDataSource {
     public static class DataSourceHelper {
         public static bool IsFieldExists(object dataSource, string fieldName, Type reqType) {
             PropertyDescriptorCollection pdc = ((ITypedList)dataSource).GetItemProperties(null);

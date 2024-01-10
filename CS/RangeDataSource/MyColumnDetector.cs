@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 
-namespace RangeDataSourceForSnap
+namespace RangeDataSource
 {
     #region #MyColumnDetector
     class MyColumnDetector : IDataSourceColumnTypeDetector

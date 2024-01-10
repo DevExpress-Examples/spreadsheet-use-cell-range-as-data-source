@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RangeDataSourceForSnap {
+namespace RangeDataSource {
     public static class GaugeHelper {
       public static void CalculateMouseValue(IGaugeContainer container, IConvertibleScaleEx scale, MouseEventArgs e) {
             BasePrimitiveHitInfo hi = container.CalcHitInfo(e.Location);

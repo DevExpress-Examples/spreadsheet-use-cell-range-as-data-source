@@ -6,7 +6,7 @@ using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 
-namespace RangeDataSourceForSnap {
+namespace RangeDataSource {
     static class Program {
         /// <summary>
         /// The main entry point for the application.

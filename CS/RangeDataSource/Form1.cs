@@ -5,23 +5,22 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace RangeDataSourceForSnap {
+namespace RangeDataSource {
     public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm {
         object rangeDS;
 
         public Form1() {
             InitializeComponent();
             spreadsheetControl1.LoadDocument("temperature.xlsx");
-            snapControl1.LoadDocument("report.snx");
             ribbonControl1.SelectedPage = dataRibbonPage1;
         }
-        private void barBtnSheetToSnap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
+        private void barBtnSheetToGauge_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
             if (spreadsheetControl1.ActiveWorksheet.Selection.Count() > 1)
                 UseRangeAsDataSource();
             else
                 UseTableAsDataSource();
 
-            xtraTabControl1.SelectedTabPage = tbSnap;
+            xtraTabControl1.SelectedTabPage = tbGauge;
         }
 
         private void UseRangeAsDataSource() {
@@ -68,7 +67,6 @@ namespace RangeDataSourceForSnap {
         }
         #endregion #DataBindings_Error
         private void BindControlsToDataSource() {
-            snapControl1.DataSource = rangeDS;
             gridControl1.DataSource = rangeDS;
             dataNavigator1.DataSource = rangeDS;
             linearScaleComponent1.DataBindings.Clear();
@@ -80,29 +78,12 @@ namespace RangeDataSourceForSnap {
         private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e) {
             if (e.Page == tbSheet) {
                 dataRibbonPage1.Visible = true;
-                snapPageCategory.Visible = false;
-                dataToolsRibbonPageCategory1.Visible = false;
                 sheetPageCategory.Visible = true;
-                reportExplorerDockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-                fieldListDockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
                 ribbonControl1.Minimized = false;
                 ribbonControl1.SelectedPage = dataRibbonPage1;
             }
             if (e.Page == tbGauge) {
-                snapPageCategory.Visible = false;
-                dataToolsRibbonPageCategory1.Visible = false;
                 sheetPageCategory.Visible = false;
-                reportExplorerDockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-                fieldListDockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
-                ribbonControl1.Minimized = true;
-            }
-            if (e.Page == tbSnap) {
-                snapPageCategory.Visible = true;
-                dataToolsRibbonPageCategory1.Visible = true;
-                sheetPageCategory.Visible = false;
-                snapControl1.Document.Fields.Update();
-                reportExplorerDockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
-                fieldListDockPanel1.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Visible;
                 ribbonControl1.Minimized = true;
             }
         }
