@@ -10,7 +10,7 @@ This example demonstrates how to select a worksheet range and use it as a data s
 
 Select the range containing data and click **Provide Data to Gauge**. The data source is created and passed to all data-aware controls. Switch to the Thermometer tab to see the linear gauge and a grid controls bound to the worksheet range.
 
-![image](./media/aae2b7c2-fcf5-11e6-80bf-00155d62480c.png)
+![image](./media/range-as-data-source-spreadsheet.png)
 
 ## Implementation Details
 
