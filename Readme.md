@@ -19,7 +19,7 @@ The [Range.GetDataSource](https://docs.devexpress.com/OfficeFileAPI/DevExpress.
 ## Files to Review
 
 * [Form1.cs](./CS/RangeDataSource/Form1.cs) (VB: [Form1.vb](./VB/RangeDataSource/Form1.vb))
-* [MyColumnDetector.cs](./CS/RangeDataSourcep/MyColumnDetector.cs) (VB: [MyColumnDetector.vb](./VB/RangeDataSource/MyColumnDetector.vb))
+* [MyColumnDetector.cs](./CS/RangeDataSource/MyColumnDetector.cs) (VB: [MyColumnDetector.vb](./VB/RangeDataSource/MyColumnDetector.vb))
 
 ## More Examples
 
